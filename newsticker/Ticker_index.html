@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>News Ticker</title>
+</head>
+<style>
+    .tcontainer {
+        width: 100%;
+        overflow: hidden;
+    }
+    
+    .ticker-wrap {
+        width: 100%;
+        padding-left: 100%;
+        background-color: #eee;
+    }
+    
+    @keyframes ticker {
+        100% {
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+    
+    .ticker-move {
+        display: inline-block;
+        white-space: nowrap;
+        padding-right: 100%;
+        animation-timing-function: linear;
+        animation: ticker 40s infinite;
+    }
+    
+    .ticker-move:hover {
+        animation-play-state: paused;
+    }
+    
+    .ticker-item {
+        display: inline-block;
+        padding: 0 40px;
+        font-size: 20px;
+    }
+</style>
+
+<body>
+    <div class="tcontainer">
+        <div class="ticker-wrap">
+            <div class="ticker-move">
+                <div class="ticker-item">Poor state of poverty alleviation.</div>
+                <div class="ticker-item">Assam flood situation worsens again, death toll rises to 89 .</div>
+                <div class="ticker-item">Health sector rife with mismanagement, corruption.</div>
+                <div class="ticker-item">Regent Hospital chairman Shahed handed over to RAB .</div>
+            </div>
+        </div>
+    </div>
+<script src="headlines_script.js"></script>    
+</body>
+
+</html>
